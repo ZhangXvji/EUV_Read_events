@@ -1,16 +1,16 @@
-# EUV_Read_events
-读取EUV事件并附上中文文本的python程序
-EUV_read_events_withnotrans.py-原始脚本，将事件和中文文本从代码里扒出来组合成一个新文本，无任何处理。
-EUV_read_events.py-用chatgpt添加了代码翻译成自然中文和文本中无意义字符的处理。
+# EUV_Read_events  
+读取EUV事件并附上中文文本的python程序  
+EUV_read_events_withnotrans.py-原始脚本，将事件和中文文本从代码里扒出来组合成一个新文本，无任何处理。  
+EUV_read_events.py-用chatgpt添加了代码翻译成自然中文和文本中无意义字符的处理。  
 
-使用说明：
-1.修改游戏路径、目标国家tag、国家名称、领袖名称
-GAME_ROOT = r"/home/zhangxuji/eu5_read_events/fake/Europa Universalis V"
-COUNTRY_TAG = "FRA"
-COUNTRY_NAME = "法兰西" #仅用于增强文本可读性
-RULER_NAME = "路易十四"
-2.运行程序，python EUV_read_events.py
-3.在程序路径生成read_events_tag.txt
+使用说明：   
+1.修改游戏路径、目标国家tag、国家名称、领袖名称  
+GAME_ROOT = r"/home/zhangxuji/eu5_read_events/fake/Europa Universalis V"  
+COUNTRY_TAG = "FRA"  
+COUNTRY_NAME = "法兰西" #仅用于增强文本可读性  
+RULER_NAME = "路易十四"  
+2.运行程序，python EUV_read_events.py  
+3.在程序路径生成read_events_tag.txt  
 
 效果：
 flavor_fra.1-稳定税收体制的建立
