@@ -13,7 +13,6 @@ RULER_NAME = "路易十四"
 3.在程序路径生成read_events_tag.txt
 
 效果：
-1.EUV_read_events.py
 flavor_fra.1-稳定税收体制的建立
 描述:
 	经过一系列艰巨的工作，「路易十四」完成了「法兰西」财政的重塑。虽然「法兰西」保留了只在战争期间征收的「仅特别税」政策，但「路易十四」成功建立了稳定税收体制的框架。在与「贵族」和「教士」达成妥协后，新政策可以颁布了，不过这些新赋税政策一定会招致「市民」和「平民」的反对。
@@ -53,44 +52,3 @@ flavor_fra.1.b-老方法更好……
 			统治者 :
 				增加行政 : 5
 				增加外交 : 10
-        
-2.EUV_read_events_withnotrans.py
-flavor_fra.1-稳定税收体制的建立
-描述:
-	经过一系列艰巨的工作，[ruler_fra.GetName]完成了[ROOT.GetCountry.GetName]财政的重塑。虽然[ROOT.GetCountry.GetNameWithNoTooltip]保留了只在战争期间征收的[ShowPolicyName('exceptional_only')]政策，但[ruler_fra.GetShortNameWithNoTooltip]成功建立了稳定税收体制的框架。在与[ROOT.GetCountry.GetGovernment.GetEstateName('nobles_estate')]和[ROOT.GetCountry.GetGovernment.GetEstateName('clergy_estate')]达成妥协后，新政策可以颁布了，不过这些新赋税政策一定会招致[ROOT.GetCountry.GetGovernment.GetEstateName('burghers_estate')]和[ROOT.GetCountry.GetGovernment.GetEstateName('peasants_estate')]的反对。
-历史信息：
-	查理七世统治时期，法兰西财政体系得到重塑，建立起了平民税制度，使法国出现了稳定的税收制度。虽然贵族和教士得到免税待遇，但平民税这一直接土地税将会在百年战争结束后为国家财政提供极大的助力。
-tag&时间：
-			tag = FRA
-			from = 1420.1.1
-			to = 1460.1.1
-			monthly_chance = 10
-要求：
-			owns = location:paris
-			stability > 25
-			at_war = no
-			has_ruler = yes
-立即触发：
-			set_variable = { name = enable_taille_tax value = 1 }
-			event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-			ruler ?= {
-	            save_scope_as = ruler_fra
-	        }
-flavor_fra.1.a-推行它。
-			[ROOT.GetCountry.GetName]会解锁[ShowLawName('fra_taille')]法律
-			historical_option = yes
-			remove_reform = government_reform:ancient_french_taxation
-			add_policy = policy:permanent_tax
-			ruler ?= {
-				add_adm = 10
-				add_dip = 5
-			}
-
-flavor_fra.1.b-老方法更好……
-			[ROOT.GetCountry.GetName]会解锁[ShowLawName('fra_taille')]法律
-			remove_reform = government_reform:ancient_french_taxation
-			add_policy = policy:exceptional_only
-			ruler ?= {
-				add_adm = 5
-				add_dip = 10
-			}
